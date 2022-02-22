@@ -2,7 +2,10 @@ package com.example.fblaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,9 +24,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnClick(View view){
-        //Add some code;
         TextView txtMessage = findViewById(R.id.txtMessage);
-
+        //SSID
+        EditText txtboxSSID = findViewById(R.id.txtboxSSID);
+        int ssid = Integer.parseInt(txtboxSSID.getText().toString());
         //English Course
         EditText txtboxEnglish = findViewById(R.id.txtboxEnglish);
         String englishClass = txtboxEnglish.getText().toString();
@@ -52,12 +56,23 @@ public class MainActivity extends AppCompatActivity {
         EditText txtBoxElective2 = findViewById(R.id.txtboxElective2);
         String elective2 = txtBoxElective2.getText().toString();
 
-        
-
-
-
-
         String englishCourse = txtboxEnglish.getText().toString();
 
+        //----------
+        //Email information;
+        String courses = englishCourse + ", " + mathClass + ", " + scienceClass + ", " + socialStudies + ", " + artClass + ","
+                + elective1 + ", " + elective2;
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{});
+        email.putExtra(Intent.EXTRA_SUBJECT, ssid + "Courses");
+        email.putExtra(Intent.EXTRA_TEXT, courses);
+
+        //need this to prompts email client only
+        email.setType("message/rfc822");
+
+        startActivity(Intent.createChooser(email, "Choose an Email client :"));
+
     }
+
+
 }
