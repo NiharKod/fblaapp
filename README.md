@@ -5,4 +5,4 @@
 - View Extracurricular Information and Signup
 - View the school calendar
 
-![Screenshot](/home/nihark/Programming/App/app/src/main/java/screenshot.png "Screenshot")
+![Screenshot](/home/nihark/Programming/App/app/src/main/java/screenshot.png?raw=true "Screenshot")
