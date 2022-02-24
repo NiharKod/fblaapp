@@ -29,7 +29,7 @@ public class ExtraCurricular extends AppCompatActivity {
     public void onSciolySignup(View v){
         Intent email = new Intent(Intent.ACTION_SEND);
         email.putExtra(Intent.EXTRA_EMAIL, new String[]{"mhsscioly@masonohioschools.com"});
-        email.putExtra(Intent.EXTRA_SUBJECT, "FBLA Signup");
+        email.putExtra(Intent.EXTRA_SUBJECT, "SciOly Signup");
         email.putExtra(Intent.EXTRA_TEXT, "Hi I would like to join SciOly.");
 
         //need this to prompts email client only
