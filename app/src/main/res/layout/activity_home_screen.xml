@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".HomeScreen">
 
+    <TextView
+        android:id="@+id/txtFos"
+        android:layout_width="282dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="653dp"
+        android:text="  Welcome to Fos"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnCourseRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="423dp"
+        android:onClick="onCourseClick"
+        android:text="Course Registration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="351dp"
+        android:onClick="onECClick"
+        android:text="Extracurricular Information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="540dp"
+        android:text="Fos is your main access center for course registration, and extracurricular actvities"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

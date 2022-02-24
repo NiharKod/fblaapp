@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FBLAApp">
         <activity
+            android:name=".ExtraCurricular"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
