@@ -57,15 +57,20 @@ public class MainActivity extends AppCompatActivity {
 
         //----------
         //Email information;
-        String courses = englishCourse + '\n' + mathClass + '\n' + scienceClass + '\n' + socialStudies + '\n' + artClass + '\n'
-                + elective1 + '\n' + elective2;
+        String englishEmoji = "\uD83D\uDCDA";
+        String mathEmoji = "\uD83D\uDD22";
+        String scienceEmoji = "\uD83E\uDDEC";
+        String socialEmoji = "\uD83D\uDDFD";
+        String artEmoji = "\uD83C\uDFA8";
+        String courses =  "My classes are :" + '\n' + englishEmoji + englishCourse + '\n' + mathEmoji +  mathClass + '\n' + scienceEmoji + scienceClass +
+                '\n' + socialEmoji + socialStudies + '\n'+ artEmoji + artClass + '\n' + elective1 + '\n' + elective2;
 
+        //share portion
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        String shareBody = courses;
         String shareSub = " ";
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
-        shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT,"My Courses");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, courses);
         startActivity(Intent.createChooser(shareIntent, "Share using"));
 
     }
@@ -110,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         String courses = englishCourse + '\n' + mathClass + '\n' + scienceClass + '\n' + socialStudies + '\n' + artClass + '\n'
                 + elective1 + '\n' + elective2;
         Intent email = new Intent(Intent.ACTION_SEND);
-        email.putExtra(Intent.EXTRA_EMAIL, new String[]{});
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"courseselections@masonohioschools.com"});
         email.putExtra(Intent.EXTRA_SUBJECT, ssid + "Courses");
         email.putExtra(Intent.EXTRA_TEXT, courses);
 

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FBLAApp">
         <activity
+            android:name=".Calendar"
+            android:exported="false" />
+        <activity
             android:name=".ExtraCurricular"
             android:exported="false" />
         <activity

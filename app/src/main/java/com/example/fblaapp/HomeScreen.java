@@ -21,6 +21,13 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     public void onECClick(View view){
+        Intent ec = new Intent(this, ExtraCurricular.class);
+        startActivity(ec);
+    }
+
+    public void onCalendarClick(View v){
+        Intent cal = new Intent(this,Calendar.class);
+        startActivity(cal);
     }
 
 
